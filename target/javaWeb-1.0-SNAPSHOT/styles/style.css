@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #9da3bf;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ===== PATAS DECORATIVAS ===== */
+.paw-deco {
+    position: fixed;
+    font-size: 2.8rem;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== NAVBAR ===== */
+.petlovers-nav {
+    background: white;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 10;
+}
+
+.petlovers-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.petlovers-nav .brand .logo-icon {
+    width: 58px;
+    height: 58px;
+}
+
+.petlovers-nav .brand span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2c2d3e;
+    letter-spacing: -0.5px;
+}
+
+/* ===== TABS ===== */
+.petlovers-tabs {
+    background: #6b6f91;
+    display: flex;
+    gap: 3px;
+    padding: 7px 16px 0;
+    position: relative;
+    z-index: 9;
+}
+
+.petlovers-tabs a {
+    padding: 7px 20px;
+    background: #c8cbe6;
+    color: #2c2d3e;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.88rem;
+    border-radius: 7px 7px 0 0;
+    border: 2px solid transparent;
+    transition: background 0.2s;
+}
+
+.petlovers-tabs a:hover,
+.petlovers-tabs a.active {
+    background: white;
+    color: #4a4d70;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.petlovers-main {
+    padding: 28px 32px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== TARJETAS INDEX ===== */
+.index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.index-card {
+    background: #6b6f91;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 6px 20px rgba(50,50,90,0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 220px;
+}
+
+.index-card .card-top {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.index-card .card-image {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.index-card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.84rem;
+    color: #e8eaf6;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.index-card ul li::before { content: "• "; }
+
+.index-card .card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+/* ===== BOTONES ===== */
+.btn-petlovers {
+    background: #c8cbe6;
+    color: #2c2d3e;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.btn-petlovers:hover { background: #eef; }
+
+.btn-icon {
+    background: #c8cbe6;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-icon:hover { background: #eef; }
+
+/* ===== FORMULARIO REGISTRO ===== */
+.registro-card {
+    background: #6b6f91;
+    border-radius: 18px;
+    padding: 26px 30px;
+    max-width: 680px;
+    margin: 20px auto;
+    box-shadow: 0 6px 20px rgba(50,50,90,0.25);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    border: 2px solid #8a8eb5;
+}
+
+.registro-form { flex: 1; }
+
+.registro-form h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #e8eaf6;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.form-row label {
+    font-weight: 700;
+    font-size: 0.83rem;
+    color: #2c2d3e;
+    background: #c8cbe6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    background: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.registro-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto-box {
+    width: 110px;
+    height: 110px;
+    background: #8a8eb5;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.foto-box-label {
+    font-size: 0.78rem;
+    color: #e8eaf6;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ===== LOGIN ===== */
+.login-wrapper {
+    min-height: 100vh;
+    background: #9da3bf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.login-brand span {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #2c2d3e;
+}
+
+.login-card {
+    background: #6b6f91;
+    border-radius: 22px;
+    padding: 36px 44px;
+    width: 380px;
+    box-shadow: 0 8px 28px rgba(50,50,90,0.3);
+    text-align: center;
+}
+
+.login-card h2 {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #e8eaf6;
+    margin-bottom: 24px;
+}
+
+.login-field {
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.login-field label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #e8eaf6;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-input-wrap {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.login-input-wrap span { font-size: 1rem; margin-right: 6px; color: #777; }
+
+.login-input-wrap input {
+    flex: 1;
+    border: none;
+    padding: 9px 4px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.92rem;
+    outline: none;
+    background: transparent;
+}
+
+.login-card .btn-petlovers {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.login-links {
+    margin-top: 14px;
+    font-size: 0.8rem;
+    color: #e8eaf6;
+}
+
+.login-links a { color: #e8eaf6; font-weight: 700; }
